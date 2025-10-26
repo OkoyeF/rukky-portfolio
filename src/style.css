@@ -1,0 +1,165 @@
+@import 'aos/dist/aos.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-dark text-white antialiased overflow-x-hidden;
+  }
+
+  ::selection {
+    @apply bg-primary text-dark;
+  }
+}
+
+@layer components {
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-dark-light;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary-dark;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary via-secondary to-accent-pink bg-clip-text text-transparent;
+    background-size: 200% 200%;
+    animation: gradient 3s ease infinite;
+  }
+
+  .glass {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10;
+  }
+
+  .glow {
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
+  }
+
+  .btn-primary {
+    @apply relative px-8 py-4 bg-gradient-to-r from-primary to-secondary text-dark font-bold rounded-xl overflow-hidden;
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/50;
+  }
+
+  .btn-primary::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent;
+    @apply transform -translate-x-full transition-transform duration-500;
+  }
+
+  .btn-primary:hover::before {
+    @apply translate-x-full;
+  }
+
+  .btn-secondary {
+    @apply px-8 py-4 border-2 border-primary text-primary font-bold rounded-xl;
+    @apply transition-all duration-300 hover:bg-primary hover:text-dark hover:scale-105;
+  }
+
+  .btn-outline {
+    @apply px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-xl;
+    @apply transition-all duration-300 hover:border-primary hover:text-primary hover:scale-105;
+  }
+
+  .card {
+    @apply glass rounded-2xl p-6 transition-all duration-300;
+    @apply hover:bg-white/10 hover:border-primary/30 hover:-translate-y-2;
+  }
+
+  .section {
+    @apply py-20 px-4 md:px-8 lg:px-16;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .hero-title {
+    @apply text-5xl md:text-7xl lg:text-8xl font-black leading-tight;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold mb-6;
+  }
+
+  .navbar-glass {
+    @apply fixed top-0 left-0 right-0 z-50 glass;
+    @apply transition-all duration-300;
+  }
+
+  .navbar-scrolled {
+    @apply bg-dark/95 shadow-lg;
+  }
+
+  .image-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent;
+    @apply opacity-0 transition-opacity duration-300;
+  }
+
+  .image-overlay-parent:hover .image-overlay {
+    @apply opacity-100;
+  }
+
+  .skill-tag {
+    @apply inline-block px-4 py-2 bg-primary/10 border border-primary/30 text-primary rounded-full text-sm font-medium;
+    @apply transition-all duration-300 hover:bg-primary hover:text-dark hover:scale-110;
+  }
+
+  .input {
+    @apply w-full px-4 py-3 glass rounded-xl text-white placeholder-white/50;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
+    @apply transition-all duration-300;
+  }
+
+  .textarea {
+    @apply input resize-none min-h-[150px];
+  }
+
+  .select {
+    @apply input appearance-none cursor-pointer;
+  }
+}
+
+.hero-pattern {
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(0, 255, 136, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(0, 204, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 90%, rgba(255, 0, 128, 0.1) 0%, transparent 50%);
+}
+
+.loader {
+  @apply fixed inset-0 bg-dark z-[9999] flex items-center justify-center;
+  @apply transition-opacity duration-500;
+}
+
+.loader.hidden {
+  @apply opacity-0 pointer-events-none;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease forwards;
+}

@@ -1,0 +1,24 @@
+{
+  "name": "rukky-portfolio",
+  "version": "1.0.0",
+  "description": "Rukky's Graphic Design Portfolio",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "tailwindcss": "^3.4.0",
+    "postcss": "^8.4.32",
+    "autoprefixer": "^10.4.16"
+  },
+  "dependencies": {
+    "gsap": "^3.12.4",
+    "aos": "^2.3.4",
+    "locomotive-scroll": "^4.1.4",
+    "splitting": "^1.0.6",
+    "swiper": "^11.0.5"
+  }
+}
