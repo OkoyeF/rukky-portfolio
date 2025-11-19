@@ -169,7 +169,7 @@ if (contactForm) {
               </div>
               <h3 class="text-3xl font-bold text-white mb-4">Thank You!</h3>
               <p class="text-gray-400 mb-8">Your message has been sent successfully. I'll get back to you soon!</p>
-              <a href="index.html" class="btn-primary inline-block">Back to Home</a>
+              <a href="/" class="btn-primary inline-block">Back to Home</a>
             </div>
           `
           gsap.from(contactForm.children[0], {

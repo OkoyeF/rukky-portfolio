@@ -39,7 +39,7 @@
               </div>
               <h3 class="text-3xl font-bold text-white mb-4">Thank You!</h3>
               <p class="text-gray-400 mb-8">Your message has been sent successfully. I'll get back to you soon!</p>
-              <a href="index.html" class="btn-primary inline-block">Back to Home</a>
+              <a href="/" class="btn-primary inline-block">Back to Home</a>
             </div>
           `,Lt.from(Lr.children[0],{opacity:0,y:20,duration:.5})}})},2e3)});console.log("%c Welcome to Rukky's Portfolio!","color: #00ff88; font-size: 24px; font-weight: bold;");console.log("%cLike what you see? Let's work together!","color: #00ccff; font-size: 16px;");
 //# sourceMappingURL=index-CduFP0Ln.js.map
