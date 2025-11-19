@@ -42,4 +42,3 @@
               <a href="index.html" class="btn-primary inline-block">Back to Home</a>
             </div>
           `,Lt.from(Lr.children[0],{opacity:0,y:20,duration:.5})}})},2e3)});console.log("%c Welcome to Rukky's Portfolio!","color: #00ff88; font-size: 24px; font-weight: bold;");console.log("%cLike what you see? Let's work together!","color: #00ccff; font-size: 16px;");
-//# sourceMappingURL=index-BGK9YgAV.js.map
