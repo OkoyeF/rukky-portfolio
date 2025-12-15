@@ -6,8 +6,9 @@
     <meta name="description" content="Contact Rukky - Graphic Designer | Get in touch for design projects">
     <title>Contact Rukky | Graphic Designer</title>
     <!-- Font Awesome Icons -->
-  <script type="module" crossorigin src="/assets/main-CHT4LCnQ.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/main-WHe4adGu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script type="module" crossorigin src="/assets/main-vrDAVhJx.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-DryUhdhS.css">
 </head>
 <body class="bg-dark text-white">
     <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
@@ -72,6 +73,16 @@
                 <!-- Contact Form -->
                 <div data-aos="fade-right" class="order-2 lg:order-1">
                     <form id="contactForm" class="glass rounded-2xl sm:rounded-3xl p-6 sm:p-8">
+                        <!-- Success Message -->
+                        <div id="successMessage" class="hidden mb-6 p-4 bg-green-500/20 border border-green-500 rounded-xl text-green-400 text-center">
+                            ✓ Message sent successfully! I'll get back to you soon.
+                        </div>
+
+                        <!-- Error Message -->
+                        <div id="errorMessage" class="hidden mb-6 p-4 bg-red-500/20 border border-red-500 rounded-xl text-red-400 text-center">
+                            ✗ Something went wrong. Please try again or email me directly.
+                        </div>
+
                         <div class="mb-5 sm:mb-6">
                             <label for="name" class="block text-sm font-semibold text-primary mb-2">Your Name *</label>
                             <input 
@@ -103,7 +114,7 @@
                                 id="phone" 
                                 name="phone" 
                                 class="input w-full"
-                                placeholder="+234 xxx xxx xxxx"
+                                placeholder="08131959395"
                             >
                         </div>
 
@@ -145,8 +156,9 @@
                             ></textarea>
                         </div>
 
-                        <button type="submit" class="btn-primary w-full">
-                            Send Message →
+                        <button type="submit" id="submitBtn" class="btn-primary w-full">
+                            <span id="btnText">Send Message →</span>
+                            <span id="btnLoading" class="hidden">Sending...</span>
                         </button>
                     </form>
                 </div>
@@ -162,8 +174,8 @@
                                 </div>
                                 <div class="min-w-0">
                                     <h3 class="text-lg sm:text-xl font-bold text-white mb-1 sm:mb-2">Email</h3>
-                                    <a href="mailto:rukky.designs@email.com" class="text-sm sm:text-base text-gray-400 hover:text-primary transition-colors break-all">
-                                        rukky.designs@email.com
+                                    <a href="mailto:Ruhkky@gmail.com" class="text-sm sm:text-base text-gray-400 hover:text-primary transition-colors break-all">
+                                        Ruhkky@gmail.com
                                     </a>
                                 </div>
                             </div>
@@ -177,8 +189,8 @@
                                 </div>
                                 <div>
                                     <h3 class="text-lg sm:text-xl font-bold text-white mb-1 sm:mb-2">Phone</h3>
-                                    <a href="tel:+234xxxxxxxxxx" class="text-sm sm:text-base text-gray-400 hover:text-primary transition-colors">
-                                        +234 xxx xxx xxxx
+                                    <a href="tel:+2348131959395" class="text-sm sm:text-base text-gray-400 hover:text-primary transition-colors">
+                                        +234 813 195 9395
                                     </a>
                                 </div>
                             </div>
@@ -204,19 +216,20 @@
                     <div class="glass rounded-xl sm:rounded-2xl p-6 sm:p-8">
                         <h3 class="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">Connect With Me</h3>
                         <div class="grid grid-cols-2 gap-3 sm:gap-4">
-                            <a href="#" class="glass rounded-lg sm:rounded-xl p-3 sm:p-4 text-center hover:bg-primary hover:text-dark transition-all duration-300 group">
+                            <!-- LinkedIn - Replace with your actual username -->
+                            <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" class="glass rounded-lg sm:rounded-xl p-3 sm:p-4 text-center hover:bg-primary hover:text-dark transition-all duration-300 group">
                                 <i class="fab fa-linkedin-in text-2xl sm:text-3xl mb-2"></i>
                                 <span class="block text-xs sm:text-sm font-semibold">LinkedIn</span>
                             </a>
-                            <a href="#" class="glass rounded-lg sm:rounded-xl p-3 sm:p-4 text-center hover:bg-primary hover:text-dark transition-all duration-300 group">
-                                <i class="fab fa-behance text-2xl sm:text-3xl mb-2"></i>
-                                <span class="block text-xs sm:text-sm font-semibold">Behance</span>
-                            </a>
-                            <a href="#" class="glass rounded-lg sm:rounded-xl p-3 sm:p-4 text-center hover:bg-primary hover:text-dark transition-all duration-300 group">
+                            
+                            <!-- Instagram - Clean URL without tracking parameters -->
+                            <a href="https://www.instagram.com/ru.created" target="_blank" rel="noopener noreferrer" class="glass rounded-lg sm:rounded-xl p-3 sm:p-4 text-center hover:bg-primary hover:text-dark transition-all duration-300 group">
                                 <i class="fab fa-instagram text-2xl sm:text-3xl mb-2"></i>
                                 <span class="block text-xs sm:text-sm font-semibold">Instagram</span>
                             </a>
-                            <a href="#" class="glass rounded-lg sm:rounded-xl p-3 sm:p-4 text-center hover:bg-primary hover:text-dark transition-all duration-300 group">
+                            
+                            <!-- WhatsApp - Replace with your actual number (format: country code + number, no + or spaces) -->
+                            <a href="https://wa.me/2348131959395?text=Hi%20Rukky,%20I'm%20interested%20in%20your%20design%20services" target="_blank" rel="noopener noreferrer" class="glass rounded-lg sm:rounded-xl p-3 sm:p-4 text-center hover:bg-primary hover:text-dark transition-all duration-300 group">
                                 <i class="fab fa-whatsapp text-2xl sm:text-3xl mb-2"></i>
                                 <span class="block text-xs sm:text-sm font-semibold">WhatsApp</span>
                             </a>
@@ -277,16 +290,16 @@
                 <div class="text-center sm:text-left sm:col-span-2 lg:col-span-1">
                     <h3 class="text-white font-bold mb-3 sm:mb-4 text-base sm:text-lg">Follow Me</h3>
                     <div class="flex gap-3 sm:gap-4 justify-center sm:justify-start">
-                        <a href="#" class="w-10 h-10 sm:w-12 sm:h-12 glass rounded-full flex items-center justify-center hover:bg-primary hover:text-dark transition-all duration-300">
+                        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="w-10 h-10 sm:w-12 sm:h-12 glass rounded-full flex items-center justify-center hover:bg-primary hover:text-dark transition-all duration-300">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 sm:w-12 sm:h-12 glass rounded-full flex items-center justify-center hover:bg-primary hover:text-dark transition-all duration-300">
+                        <a href="https://www.behance.net/yourprofile" target="_blank" class="w-10 h-10 sm:w-12 sm:h-12 glass rounded-full flex items-center justify-center hover:bg-primary hover:text-dark transition-all duration-300">
                             <i class="fab fa-behance"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 sm:w-12 sm:h-12 glass rounded-full flex items-center justify-center hover:bg-primary hover:text-dark transition-all duration-300">
+                        <a href="https://www.instagram.com/ru.created" target="_blank" class="w-10 h-10 sm:w-12 sm:h-12 glass rounded-full flex items-center justify-center hover:bg-primary hover:text-dark transition-all duration-300">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 sm:w-12 sm:h-12 glass rounded-full flex items-center justify-center hover:bg-primary hover:text-dark transition-all duration-300">
+                        <a href="https://wa.me/2348131959395" target="_blank" class="w-10 h-10 sm:w-12 sm:h-12 glass rounded-full flex items-center justify-center hover:bg-primary hover:text-dark transition-all duration-300">
                             <i class="fab fa-whatsapp"></i>
                         </a>
                     </div>
@@ -299,5 +312,440 @@
         </div>
     </footer>
 
+    
+    <!-- Contact Form JavaScript -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const btnText = document.getElementById('btnText');
+            const btnLoading = document.getElementById('btnLoading');
+            const successMsg = document.getElementById('successMessage');
+            const errorMsg = document.getElementById('errorMessage');
+            
+            // Hide previous messages
+            successMsg.classList.add('hidden');
+            errorMsg.classList.add('hidden');
+            
+            // Show loading state
+            btnText.classList.add('hidden');
+            btnLoading.classList.remove('hidden');
+            submitBtn.disabled = true;
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                service: document.getElementById('service').value,
+                budget: document.getElementById('budget').value,
+                message: document.getElementById('message').value,
+                timestamp: new Date().toLocaleString()
+            };
+            
+            try {
+                // OPTION 1: Google Sheets (Replace with your Google Apps Script URL)
+                const response = await fetch('YOUR_GOOGLE_APPS_SCRIPT_URL_HERE', {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+                
+                // Show success message
+                successMsg.classList.remove('hidden');
+                this.reset();
+                
+                // Optional: Send to your email as backup
+                // window.location.href = `mailto:Ruhkky@gmail.com?subject=New Contact Form Submission from ${formData.name}&body=${encodeURIComponent(JSON.stringify(formData, null, 2))}`;
+                
+            } catch (error) {
+                console.error('Error:', error);
+                errorMsg.classList.remove('hidden');
+            } finally {
+                // Reset button state
+                btnText.classList.remove('hidden');
+                btnLoading.classList.add('hidden');
+                submitBtn.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Rukky - Graphic Designer | Get in touch for design projects">
+    <title>Contact Rukky | Graphic Designer</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-dark text-white">
+    <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+        <div class="absolute top-[10%] left-[10%] w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full opacity-20 blur-xl animate-float"></div>
+        <div class="absolute top-[60%] right-[10%] w-32 h-32 bg-gradient-to-br from-accent-pink to-accent-purple rounded-full opacity-20 blur-xl animate-float delay-200"></div>
+        <div class="absolute bottom-[20%] left-[20%] w-16 h-16 bg-gradient-to-br from-secondary to-primary rounded-full opacity-20 blur-xl animate-float delay-400"></div>
+    </div>
+
+    <nav id="navbar" class="navbar-glass">
+        <div class="container-custom mx-auto px-4 sm:px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="/" class="text-xl sm:text-2xl font-bold">
+                    <span class="text-white">RUKKY</span><span class="text-primary">.</span>
+                </a>
+
+                <ul class="hidden md:flex items-center space-x-6 lg:space-x-8">
+                    <li><a href="/" class="text-white hover:text-primary transition-colors duration-300 font-medium">Home</a></li>
+                    <li><a href="/about" class="text-white hover:text-primary transition-colors duration-300 font-medium">About</a></li>
+                    <li><a href="/portfolio" class="text-white hover:text-primary transition-colors duration-300 font-medium">Portfolio</a></li>
+                    <li><a href="/contact" class="text-primary font-medium">Contact</a></li>
+                </ul>
+
+                <a href="/contact" class="hidden md:block btn-primary text-sm">
+                    Hire Me
+                </a>
+
+                <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <ul class="flex flex-col space-y-4">
+                    <li><a href="/" class="block text-white hover:text-primary transition-colors duration-300">Home</a></li>
+                    <li><a href="/about" class="block text-white hover:text-primary transition-colors duration-300">About</a></li>
+                    <li><a href="/portfolio" class="block text-white hover:text-primary transition-colors duration-300">Portfolio</a></li>
+                    <li><a href="/contact" class="block text-primary">Contact</a></li>
+                    <li><a href="/contact" class="btn-primary inline-block text-center text-sm w-full">Hire Me</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Responsive -->
+    <section class="section pt-24 md:pt-32 relative z-10">
+        <div class="container-custom mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12 md:mb-16" data-aos="fade-up">
+                <span class="text-primary text-xs sm:text-sm font-semibold uppercase tracking-wider mb-3 sm:mb-4 block">Get in touch</span>
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
+                    <span class="gradient-text">Let's Create Together</span>
+                </h1>
+                <p class="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto px-2">
+                    Have a project in mind? I'd love to hear about it and discuss how we can bring your vision to life
+                </p>
+            </div>
+
+            <!-- Contact Form and Info - Responsive Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto">
+                
+                <!-- Contact Form -->
+                <div data-aos="fade-right" class="order-2 lg:order-1">
+                    <form id="contactForm" class="glass rounded-2xl sm:rounded-3xl p-6 sm:p-8">
+                        <!-- Success Message -->
+                        <div id="successMessage" class="hidden mb-6 p-4 bg-green-500/20 border border-green-500 rounded-xl text-green-400 text-center">
+                            ✓ Message sent successfully! I'll get back to you soon.
+                        </div>
+
+                        <!-- Error Message -->
+                        <div id="errorMessage" class="hidden mb-6 p-4 bg-red-500/20 border border-red-500 rounded-xl text-red-400 text-center">
+                            ✗ Something went wrong. Please try again or email me directly.
+                        </div>
+
+                        <div class="mb-5 sm:mb-6">
+                            <label for="name" class="block text-sm font-semibold text-primary mb-2">Your Name *</label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                required 
+                                class="input w-full"
+                                placeholder="John Doe"
+                            >
+                        </div>
+
+                        <div class="mb-5 sm:mb-6">
+                            <label for="email" class="block text-sm font-semibold text-primary mb-2">Email Address *</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                required 
+                                class="input w-full"
+                                placeholder="john@example.com"
+                            >
+                        </div>
+
+                        <div class="mb-5 sm:mb-6">
+                            <label for="phone" class="block text-sm font-semibold text-primary mb-2">Phone Number</label>
+                            <input 
+                                type="tel" 
+                                id="phone" 
+                                name="phone" 
+                                class="input w-full"
+                                placeholder="08131959395"
+                            >
+                        </div>
+
+                        <div class="mb-5 sm:mb-6">
+                            <label for="service" class="block text-sm font-semibold text-primary mb-2">Service Needed *</label>
+                            <select id="service" name="service" required class="select w-full">
+                                <option value="">Select a service</option>
+                                <option value="branding">Brand Identity</option>
+                                <option value="logo">Logo Design</option>
+                                <option value="illustration">Illustration</option>
+                                <option value="packaging">Packaging Design</option>
+                                <option value="print">Print Design</option>
+                                <option value="social">Social Media Graphics</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-5 sm:mb-6">
+                            <label for="budget" class="block text-sm font-semibold text-primary mb-2">Project Budget</label>
+                            <select id="budget" name="budget" class="select w-full">
+                                <option value="">Select budget range</option>
+                                <option value="under-50k">Under ₦50,000</option>
+                                <option value="50k-100k">₦50,000 - ₦100,000</option>
+                                <option value="100k-250k">₦100,000 - ₦250,000</option>
+                                <option value="250k-500k">₦250,000 - ₦500,000</option>
+                                <option value="500k+">₦500,000+</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-5 sm:mb-6">
+                            <label for="message" class="block text-sm font-semibold text-primary mb-2">Project Details *</label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                required 
+                                rows="5"
+                                class="textarea w-full min-h-[120px]"
+                                placeholder="Tell me about your project, goals, and timeline..."
+                            ></textarea>
+                        </div>
+
+                        <button type="submit" id="submitBtn" class="btn-primary w-full">
+                            <span id="btnText">Send Message →</span>
+                            <span id="btnLoading" class="hidden">Sending...</span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div data-aos="fade-left" class="order-1 lg:order-2">
+                    <div class="space-y-6 md:space-y-8 mb-8 md:mb-12">
+                        <!-- Email -->
+                        <div class="glass rounded-xl sm:rounded-2xl p-5 sm:p-6 hover:bg-white/10 transition-all duration-300">
+                            <div class="flex items-start gap-3 sm:gap-4">
+                                <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-primary to-secondary rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-envelope text-lg sm:text-xl text-white"></i>
+                                </div>
+                                <div class="min-w-0">
+                                    <h3 class="text-lg sm:text-xl font-bold text-white mb-1 sm:mb-2">Email</h3>
+                                    <a href="mailto:Ruhkky@gmail.com" class="text-sm sm:text-base text-gray-400 hover:text-primary transition-colors break-all">
+                                        Ruhkky@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="glass rounded-xl sm:rounded-2xl p-5 sm:p-6 hover:bg-white/10 transition-all duration-300">
+                            <div class="flex items-start gap-3 sm:gap-4">
+                                <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-secondary to-accent-purple rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-phone text-lg sm:text-xl text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg sm:text-xl font-bold text-white mb-1 sm:mb-2">Phone</h3>
+                                    <a href="tel:+2348131959395" class="text-sm sm:text-base text-gray-400 hover:text-primary transition-colors">
+                                        +234 813 195 9395
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Location -->
+                        <div class="glass rounded-xl sm:rounded-2xl p-5 sm:p-6 hover:bg-white/10 transition-all duration-300">
+                            <div class="flex items-start gap-3 sm:gap-4">
+                                <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-accent-pink to-accent-orange rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt text-lg sm:text-xl text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg sm:text-xl font-bold text-white mb-1 sm:mb-2">Location</h3>
+                                    <p class="text-sm sm:text-base text-gray-400">
+                                        Lagos, Nigeria
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Connect -->
+                    <div class="glass rounded-xl sm:rounded-2xl p-6 sm:p-8">
+                        <h3 class="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">Connect With Me</h3>
+                        <div class="grid grid-cols-2 gap-3 sm:gap-4">
+                            <!-- LinkedIn - Replace with your actual username -->
+                            <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" class="glass rounded-lg sm:rounded-xl p-3 sm:p-4 text-center hover:bg-primary hover:text-dark transition-all duration-300 group">
+                                <i class="fab fa-linkedin-in text-2xl sm:text-3xl mb-2"></i>
+                                <span class="block text-xs sm:text-sm font-semibold">LinkedIn</span>
+                            </a>
+                            
+                            <!-- Instagram - Clean URL without tracking parameters -->
+                            <a href="https://www.instagram.com/ru.created" target="_blank" rel="noopener noreferrer" class="glass rounded-lg sm:rounded-xl p-3 sm:p-4 text-center hover:bg-primary hover:text-dark transition-all duration-300 group">
+                                <i class="fab fa-instagram text-2xl sm:text-3xl mb-2"></i>
+                                <span class="block text-xs sm:text-sm font-semibold">Instagram</span>
+                            </a>
+                            
+                            <!-- WhatsApp - Replace with your actual number (format: country code + number, no + or spaces) -->
+                            <a href="https://wa.me/2348131959395?text=Hi%20Rukky,%20I'm%20interested%20in%20your%20design%20services" target="_blank" rel="noopener noreferrer" class="glass rounded-lg sm:rounded-xl p-3 sm:p-4 text-center hover:bg-primary hover:text-dark transition-all duration-300 group">
+                                <i class="fab fa-whatsapp text-2xl sm:text-3xl mb-2"></i>
+                                <span class="block text-xs sm:text-sm font-semibold">WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Response Time Notice -->
+            <div class="mt-12 md:mt-16 text-center glass rounded-2xl sm:rounded-3xl p-6 sm:p-8 max-w-3xl mx-auto" data-aos="fade-up">
+                <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
+                    <span class="gradient-text">Quick Response Time</span>
+                </h3>
+                <p class="text-sm sm:text-base text-gray-400 mb-4 sm:mb-6 px-2">
+                    I typically respond to all inquiries within 24 hours. For urgent projects, 
+                    please mention it in your message and I'll prioritize accordingly.
+                </p>
+                <div class="flex flex-wrap justify-center gap-3 sm:gap-4 text-xs sm:text-sm">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 bg-primary rounded-full"></span>
+                        <span class="text-gray-400">Available for freelance</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 bg-primary rounded-full"></span>
+                        <span class="text-gray-400">Open to collaborations</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 bg-primary rounded-full"></span>
+                        <span class="text-gray-400">Remote work friendly</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Responsive -->
+    <footer class="section bg-dark relative z-10 mt-12 md:mt-20">
+        <div class="container-custom mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 md:gap-12 mb-8 md:mb-12">
+                <div class="text-center sm:text-left">
+                    <a href="/" class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 inline-block">
+                        <span class="text-white">RUKKY</span><span class="text-primary">.</span>
+                    </a>
+                    <p class="text-sm sm:text-base text-gray-400">
+                        Graphic Designer specializing in brand identity, illustration, and visual storytelling.
+                    </p>
+                </div>
+
+                <div class="text-center sm:text-left">
+                    <h3 class="text-white font-bold mb-3 sm:mb-4 text-base sm:text-lg">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/about" class="text-sm sm:text-base text-gray-400 hover:text-primary transition-colors">About</a></li>
+                        <li><a href="/portfolio" class="text-sm sm:text-base text-gray-400 hover:text-primary transition-colors">Portfolio</a></li>
+                        <li><a href="/contact" class="text-sm sm:text-base text-gray-400 hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="text-center sm:text-left sm:col-span-2 lg:col-span-1">
+                    <h3 class="text-white font-bold mb-3 sm:mb-4 text-base sm:text-lg">Follow Me</h3>
+                    <div class="flex gap-3 sm:gap-4 justify-center sm:justify-start">
+                        <a href="https://www.linkedin.com/in/rukky-ohare-2a275a313" target="_blank" class="w-10 h-10 sm:w-12 sm:h-12 glass rounded-full flex items-center justify-center hover:bg-primary hover:text-dark transition-all duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.behance.net/rukevweohare" target="_blank" class="w-10 h-10 sm:w-12 sm:h-12 glass rounded-full flex items-center justify-center hover:bg-primary hover:text-dark transition-all duration-300">
+                            <i class="fab fa-behance"></i>
+                        </a>
+                        <a href="https://www.instagram.com/ru.created" target="_blank" class="w-10 h-10 sm:w-12 sm:h-12 glass rounded-full flex items-center justify-center hover:bg-primary hover:text-dark transition-all duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/2348131959395" target="_blank" class="w-10 h-10 sm:w-12 sm:h-12 glass rounded-full flex items-center justify-center hover:bg-primary hover:text-dark transition-all duration-300">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>ß
+
+            <div class="border-t border-white/10 pt-6 sm:pt-8 text-center">
+                <p class="text-xs sm:text-sm text-gray-400">© 2025 Rukky. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    
+    <!-- Contact Form JavaScript -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const btnText = document.getElementById('btnText');
+            const btnLoading = document.getElementById('btnLoading');
+            const successMsg = document.getElementById('successMessage');
+            const errorMsg = document.getElementById('errorMessage');
+            
+            // Hide previous messages
+            successMsg.classList.add('hidden');
+            errorMsg.classList.add('hidden');
+            
+            // Show loading state
+            btnText.classList.add('hidden');
+            btnLoading.classList.remove('hidden');
+            submitBtn.disabled = true;
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                service: document.getElementById('service').value,
+                budget: document.getElementById('budget').value,
+                message: document.getElementById('message').value,
+                timestamp: new Date().toLocaleString()
+            };
+            
+            try {
+                // OPTION 1: Google Sheets (Replace with your Google Apps Script URL)
+                const response = await fetch('YOUR_GOOGLE_APPS_SCRIPT_URL_HERE', {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+                
+                // Show success message
+                successMsg.classList.remove('hidden');
+                this.reset();
+                
+                // Optional: Send to your email as backup
+                // window.location.href = `mailto:Ruhkky@gmail.com?subject=New Contact Form Submission from ${formData.name}&body=${encodeURIComponent(JSON.stringify(formData, null, 2))}`;
+                
+            } catch (error) {
+                console.error('Error:', error);
+                errorMsg.classList.remove('hidden');
+            } finally {
+                // Reset button state
+                btnText.classList.remove('hidden');
+                btnLoading.classList.add('hidden');
+                submitBtn.disabled = false;
+            }
+        });
+    </script>
 </body>
 </html>
